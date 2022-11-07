@@ -1,6 +1,11 @@
 from django.urls import path
 from . import views
 from .views import BasePageView
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
 
 
 
@@ -8,9 +13,9 @@ from .views import BasePageView
 urlpatterns = [
     path("base/", BasePageView.as_view(), name="base"),
 
-#    path("home", views.home, name="home"),
-     
 
-#    path("home", views.home, name="home"),
-#    path("reg/", views.register, name="register"),
+
+
 ]
+
+

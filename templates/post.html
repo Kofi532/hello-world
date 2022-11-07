@@ -1,0 +1,13 @@
+{% if user.is_authenticated %}
+<h1>Create Post Page</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Submit New Post</button>
+</form>
+
+{% else %}
+
+<h1>Kindly login first.....</h1>
+
+{% endif %}

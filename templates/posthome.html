@@ -1,0 +1,14 @@
+{% if user.is_authenticated %}
+<h1>Django Image Uploading</h1>
+<ul>
+  {% for post in object_list %}
+    <h2>{{ post.title }}</h2> <h2>{{ post.firstname }}</h2> <h2>{{ post.level }}</h2> <h2>{{ post.date }}</h2>
+    <img src="{{ post.cover.url }}" alt="{{ post.title }}">
+  {% endfor %}
+</ul>
+
+{% else %}
+
+<h1>Kindly login first</h1>
+
+{% endif %}
